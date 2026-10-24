@@ -278,7 +278,15 @@ async function clickPhoto() {
 
             <button
               className="exam-end-button"
-              onClick={endTest}
+              onClick={() => {
+                const confirmed = window.confirm(
+                  "Are you sure you want to end the examination?"
+                );
+
+                if (confirmed) {
+                  endTest();
+                }
+              }}
             >
               End Session
             </button>
