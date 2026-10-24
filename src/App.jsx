@@ -10,7 +10,7 @@ function App() {
   const imageCaptureRef = useRef(null);
   const [completed, setCompleted] = useState(false);
   const [fullScreenReady, setFullScreenReady] = useState(false);
-
+  const [starting, setStarting] = useState(false);
 
   
   async function getRemainingTime() {
@@ -85,6 +85,8 @@ async function clickPhoto() {
 
   
   async function startTest() {
+    if (starting) return;
+
     if (!cameraReady) {
       alert("Please enable your camera first.");
       return;
@@ -95,17 +97,26 @@ async function clickPhoto() {
       return;
     }
 
-    const response = await window.electronAPI.showExamRules();
+    setStarting(true);
 
-    if (response === 0) {
-      await window.electronAPI.startTest();
+    try {
+      const response = await window.electronAPI.showExamRules();
 
-      const remainingTime =
-        await window.electronAPI.getRemainingTime();
+      if (response === 0) {
+        await window.electronAPI.startTest();
 
-      setCompleted(false);
-      setTime(remainingTime);
-      setStarted(true);
+        const remainingTime =
+          await window.electronAPI.getRemainingTime();
+
+        setCompleted(false);
+        setTime(remainingTime);
+        setStarted(true);
+      }
+    } catch (error) {
+      console.error("Failed to start examination:", error);
+      alert("Could not start the examination. Please try again.");
+    } finally {
+      setStarting(false);
     }
   }
     
