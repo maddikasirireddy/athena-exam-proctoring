@@ -271,11 +271,6 @@ async function clickPhoto() {
               </div>
 
               <div className="exam-monitor-row">
-                <span>Photo Capture</span>
-                <strong>Every 5 seconds</strong>
-              </div>
-
-              <div className="exam-monitor-row">
                 <span>Full Screen</span>
                 <strong>Enabled</strong>
               </div>
@@ -294,10 +289,23 @@ async function clickPhoto() {
         {/* COMPLETED SESSION */}
         {completed && (
           <div className="session-completed">
-            <h3>Session Completed</h3>
-            <p>Your monitoring session has ended.</p>
+            <div className="completion-icon">✓</div>
+
+            <h2>Examination Completed</h2>
+
+            <p>
+              Your examination session has ended successfully.
+            </p>
+
+            <div className="completion-message">
+              <strong>Session Ended</strong>
+              <span>
+                You may now close the application.
+              </span>
+            </div>
           </div>
         )}
+
 
       </div>
     </>
