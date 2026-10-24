@@ -256,11 +256,19 @@ async function clickPhoto() {
               </span>
             </div>
 
-            <div className="exam-timer-card">
-              <p>Time Remaining</p>
-              <h1>{formatTimeLeft(time)}</h1>
-              <span>Examination in progress</span>
-            </div>
+            <div
+            className={`exam-timer-card ${
+              time > 0 && time <= 10000 ? "timer-warning" : ""
+            }`}
+          >
+            <p>Time Remaining</p>
+            <h1>{formatTimeLeft(time)}</h1>
+            <span>
+              {time > 0 && time <= 10000
+                ? "Hurry! Time is running out"
+                : "Examination in progress"}
+            </span>
+          </div>
 
             <div className="exam-monitor-card">
               <h3>Monitoring Status</h3>
