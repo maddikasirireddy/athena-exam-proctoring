@@ -250,8 +250,9 @@ async function clickPhoto() {
               <button
                 onClick={startTest}
                 className="btn btn-light-blue"
+                disabled={starting}
               >
-                Go To Test
+                {starting ? "Starting..." : "Go To Test"}
               </button>
             </div>
           </>
