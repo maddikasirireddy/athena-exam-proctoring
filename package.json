@@ -19,6 +19,8 @@
   "build": {
   "appId": "com.athena.examproctoring",
   "productName": "Athena Exam Proctoring",
+  "compression": "maximum",
+  "electronLanguages": ["en"],
   "directories": {
     "output": "release"
   },
