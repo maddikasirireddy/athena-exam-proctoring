@@ -362,3 +362,7 @@ body {
     flex-direction: column;
   }
 }
+
+.exam-timer-card.timer-warning {
+  border: 2px solid #ef4444;
+}
