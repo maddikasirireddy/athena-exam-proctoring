@@ -12,7 +12,7 @@ This project demonstrates the practical implementation of Electron desktop APIs,
 - Requests webcam permission before starting an examination.
 - Displays a live camera preview.
 - Automatically captures images every 5 seconds during an active session.
-- Saves captured images locally in `electron/cameraFeed/`.
+- Saves captured images locally in the application's user-data directory, inside a cameraFeed folder.
 - Stops image capture and releases camera resources when the session ends.
 - Handles camera permission and image capture errors.
 
