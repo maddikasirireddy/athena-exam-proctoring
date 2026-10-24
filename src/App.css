@@ -663,3 +663,57 @@ appearing in the layout.
     flex-direction: column;
   }
 }
+
+/* Examination completed screen */
+
+.session-completed {
+  width: min(90%, 520px);
+  margin: 100px auto;
+  padding: 48px 32px;
+  text-align: center;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+  box-sizing: border-box;
+}
+
+.completion-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: #e7f7ee;
+  color: #16834a;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.session-completed h2 {
+  color: #17233c;
+  margin-bottom: 12px;
+  font-size: 26px;
+}
+
+.session-completed p {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.completion-message {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  background: #f0f5ff;
+  border-radius: 12px;
+  color: #1744a5;
+}
+
+.completion-message span {
+  font-size: 14px;
+  color: #64748b;
+}
