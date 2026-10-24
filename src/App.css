@@ -543,3 +543,123 @@ appearing in the layout.
   background: white;
   border-radius: 16px;
 }
+
+/* Active examination dashboard */
+
+.exam-dashboard {
+  width: min(100%, 760px);
+  margin: 45px auto;
+  padding: 28px;
+  box-sizing: border-box;
+}
+
+.exam-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.exam-dashboard-header h2 {
+  margin: 0;
+  font-size: 26px;
+  color: #17233c;
+}
+
+.exam-live-status {
+  color: #167347;
+  background: #e7f7ee;
+  border-radius: 30px;
+  padding: 9px 15px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.exam-timer-card {
+  background: #f0f5ff;
+  border: 1px solid #dbe6ff;
+  border-radius: 18px;
+  padding: 36px 24px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.exam-timer-card p {
+  margin: 0;
+  font-size: 15px;
+  color: #52627e;
+}
+
+.exam-timer-card h1 {
+  font-size: clamp(42px, 8vw, 66px);
+  letter-spacing: 2px;
+  color: #1744a5;
+  margin: 14px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.exam-timer-card span {
+  color: #687892;
+  font-size: 13px;
+}
+
+.exam-monitor-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.exam-monitor-card h3 {
+  margin: 0 0 18px;
+  color: #17233c;
+}
+
+.exam-monitor-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 14px;
+}
+
+.exam-monitor-row:last-child {
+  border-bottom: none;
+}
+
+.exam-monitor-row strong {
+  color: #167347;
+  text-align: right;
+}
+
+.exam-end-button {
+  width: 100%;
+  background: #c83535;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.exam-end-button:hover {
+  background: #a92727;
+}
+
+@media (max-width: 600px) {
+  .exam-dashboard {
+    margin: 15px auto;
+    padding: 14px;
+  }
+
+  .exam-dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
