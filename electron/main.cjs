@@ -5,9 +5,7 @@ const {
   dialog,
 } = require("electron");
 const path = require("path");
-const { requestFormReset } = require("react-dom");
 const fs = require("fs")
-const { arrayBuffer } = require("stream/consumers");
 
 let win = null;
 
@@ -21,7 +19,11 @@ function createWindow() {
     },
   });
 
-  win.loadURL("http://localhost:5173/");
+  if (app.isPackaged) {
+    win.loadFile(path.join(__dirname, "../dist/index.html"));
+  } else {
+    win.loadURL("http://localhost:5173/");
+  };
 }
 
 
@@ -61,7 +63,10 @@ ipcMain.handle("show-rules", async () => {
 
 
 ipcMain.handle("save-photo", (event, arrayBuffer) => {
-  const folderPath = path.join(__dirname, "cameraFeed");
+  const folderPath = path.join(
+  app.getPath("userData"),
+  "cameraFeed"
+);
 
   if (!fs.existsSync(folderPath)) {
     fs.mkdirSync(folderPath);
