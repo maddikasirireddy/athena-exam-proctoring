@@ -366,3 +366,12 @@ body {
 .exam-timer-card.timer-warning {
   border: 2px solid #ef4444;
 }
+
+.exam-timer-card.timer-warning h1 {
+  color: #dc2626;
+}
+
+.exam-timer-card.timer-warning span {
+  color: #dc2626;
+  font-weight: 600;
+}
