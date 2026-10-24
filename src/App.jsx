@@ -248,19 +248,48 @@ async function clickPhoto() {
 
         {/* ACTIVE SESSION */}
         {started && (
-          <div className="session-status">
-            <h3>Exam Session in Progress</h3>
+          <div className="exam-dashboard">
+            <div className="exam-dashboard-header">
+              <h2>Athena Examination</h2>
+              <span className="exam-live-status">
+                ● Session Active
+              </span>
+            </div>
 
-            <p>Time Left: {formatTimeLeft(time)}</p>
+            <div className="exam-timer-card">
+              <p>Time Remaining</p>
+              <h1>{formatTimeLeft(time)}</h1>
+              <span>Examination in progress</span>
+            </div>
+
+            <div className="exam-monitor-card">
+              <h3>Monitoring Status</h3>
+
+              <div className="exam-monitor-row">
+                <span>Camera</span>
+                <strong>● Active</strong>
+              </div>
+
+              <div className="exam-monitor-row">
+                <span>Photo Capture</span>
+                <strong>Every 5 seconds</strong>
+              </div>
+
+              <div className="exam-monitor-row">
+                <span>Full Screen</span>
+                <strong>Enabled</strong>
+              </div>
+            </div>
 
             <button
-              className="btn btn-dark"
+              className="exam-end-button"
               onClick={endTest}
             >
               End Session
             </button>
           </div>
         )}
+
 
         {/* COMPLETED SESSION */}
         {completed && (
