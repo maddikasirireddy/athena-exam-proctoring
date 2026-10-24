@@ -34,7 +34,7 @@ let end_time = null;
 
 
 ipcMain.handle("start-test", () => {
-  end_time = Date.now() + 30 * 1000;
+  end_time = Date.now() + 2 * 60 * 1000;
 });
 
 

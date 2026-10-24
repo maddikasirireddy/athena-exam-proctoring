@@ -27,14 +27,16 @@ This project demonstrates the practical implementation of Electron desktop APIs,
 - Allows the user to accept or cancel the rules.
 - Starts the examination only after the rules are accepted.
 
+
 ### 4. Examination Timer
-- Starts a 30-second countdown after the examination rules are accepted.
+
+- Starts a 2-minute countdown after the examination rules are accepted.
 - Displays the remaining examination time.
 - Retrieves the remaining time through Electron IPC.
 - Automatically ends the examination when the countdown reaches zero.
 - Allows the user to end the examination manually.
 
-**Note:** The 30-second duration is configured for demonstration and testing purposes.
+**Note:** The 2-minute duration is configured for demonstration and testing purposes.
 
 ### 5. Session Completion
 - Stops automatic image capture.
@@ -129,7 +131,7 @@ Allow camera access when prompted.
 3. **Enable Kiosk Mode:** The user activates full-screen kiosk mode.
 4. **Verify Kiosk Mode:** Electron confirms that kiosk mode is enabled.
 5. **Accept Examination Rules:** A native dialog displays the examination instructions.
-6. **Start Examination:** A 30-second countdown begins after the examination rules are accepted.
+6. **Start Examination:** A 2-minute countdown begins after the examination rules are accepted.
 7. **Automatic Monitoring:** Camera images are captured every 5 seconds and stored locally.
 8. **End Examination:** The session ends automatically when the timer expires or manually when the user selects End Session.
 9. **Resource Cleanup:** Camera access and scheduled image captures are stopped, and the completion screen is displayed.
